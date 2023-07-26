@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Psychometrics</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container" style="display: flex; flex-direction: column; padding: 0;">
+    <div class="stripsl" style=" background: rgb(40, 231, 245); z-index: 3;"></div>
+    <div class="stripsl"  style="transform: translate(100%,0); background: rgb(3, 150, 207);z-index: 2; "></div>
+    <div class="stripsl" style=" transform: translate(199.8%,0);background: rgb(5, 42, 121); z-index: 1;"></div>
+    <div class="main" style="width:50.6%; height: 100%; position: absolute; transform: translate(48.8%,0);background: rgb(7, 22, 65);">
+                 <div class="box">
+                  <h3 class="Play">PLAY</h3>
+                    <h3 id="level">Levels</h3>
+                    
+                    <div class="gamebox">
+                    <div class="row">
+                          <div class="square" onclick="getBlockIndex(event)"> </div>
+                          <div class="square" onclick="getBlockIndex(event)"> </div>
+                          <div class="square" onclick="getBlockIndex(event)"> </div>
+                    </div>
+                    <div class="row">
+                          <div class="square" onclick="getBlockIndex(event)"> </div>
+                          <div class="square" onclick="getBlockIndex(event)"> </div>
+                          <div class="square" onclick="getBlockIndex(event)"> </div>
+                    </div>
+                    <div class="row">
+                          <div class="square" onclick="getBlockIndex(event)"> </div>
+                          <div class="square" onclick="getBlockIndex(event)"> </div>
+                          <div class="square" onclick="getBlockIndex(event)"> </div>
+                    </div>
+                 </div>
+                 <div class="errorbox">
+                    <img src="tryagain.gif" alt="" srcset="" > 
+                    <div class="b1" style="z-index:1; transform: translate(40%,-280%); opacity: 0; scale:0;">Try Again</div>
+                </div> 
+                 </div>
+    </div>
+    <div class="stripsr" style="transform: translate(912.3%,0);background: rgb(5, 42, 121) ;box-shadow: -8px -7px 9px 5px rgb(2, 10, 36);"></div>
+    <div class="stripsr" style="transform: translate(1012.3%,0); background:rgb(3, 150, 207);  "></div>
+    <div class="stripsr" style="transform: translate(1112.3%,0);background:  rgb(40, 231, 245);"></div>
+</div>
+</body>
+
+<script src="script.js"></script>
+</html>

@@ -1,0 +1,137 @@
+*{
+ margin: 0;
+ padding: 0;
+ caret-color: transparent;
+}
+.stripsl {
+    box-shadow: 8px 7px 9px 5px rgb(2, 10, 36);
+  }
+  .stripsr {
+    box-shadow: -8px -7px 9px 5px rgb(2, 10, 36);
+    z-index: 1;
+  }
+.stripsl,.stripsr{
+    height: 100%;
+    width: 8.25%;
+    position: absolute;
+}
+.box{
+     overflow: hidden; 
+    padding: 35px;
+    padding-top: 28px;
+    width: 50%;
+    height: 2%;
+    background: white;
+    position: absolute;
+    transform: translate(35%,550%);
+    text-align: center;
+    font-family: FreeMono;
+    font-size: xx-large;
+    font-weight: 800;
+    border-radius:0;
+}
+.box:hover{
+    box-shadow: 7px 7px 10px 8px rgb(0, 0, 0);
+}
+.b1{
+    padding: 12px;
+    width: 50%;
+    border-radius: 12px;
+    transform: translate(40%,-60%);
+    cursor: pointer;
+    background: rgb(176, 200, 243);
+}
+.gamebox{
+    background: #ffffff;
+    position: absolute;
+    transform: translate(19%,24%);
+    height: 52%;
+    width:64% ;
+   
+}
+.errorbox{
+    display: inline;
+}
+.errorbox img{
+    transform: translate(0,-13.5%);
+    height: 100%;
+    width: 100%;
+    
+    border-radius: 12px;
+}
+.row{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 12px;
+    margin-right: 0;
+    width: 90%;
+    height: 28%;
+    transform: translate(5.5%,5%);
+}
+.square{
+    height: 100%; 
+    width:25%; 
+    background: rgb(67, 179, 231); 
+    margin: 9px;
+    border-radius: 12px;
+    animation:none;
+    animation-delay: 200ms;
+}
+.Play{
+    margin-bottom: 22px;
+}
+.fadeIn{
+    animation: 0.5s fadeIn forwards;
+    animation-delay: 0.3s;
+} 
+
+.error{
+    animation: 0.5s error forwards;
+    animation-delay: 0.3s;
+}
+.okk{
+    animation: 0.5s okk forwards;
+    animation-delay: 0.3s;
+}
+.ohh{
+    animation: 0.5s ohh forwards;
+    animation-delay: 0.3s;
+}
+@keyframes fadeIn {
+    to{
+    width: 60%;
+    height: 60%;
+    box-shadow: none;
+    border-radius: 15px;
+    transform: translate(25%,25%);  
+    }
+}
+@keyframes error {
+    to{
+    background:black;
+    width: 45%;
+    height: 50%;
+    box-shadow: none;
+    border-radius: 15px;
+    transform: translate(59%,49%);
+    }
+}
+@keyframes Glow {
+    from{
+        background-color: rgb(82, 253, 216);
+    }
+}
+@keyframes okk {
+    to{
+     width: 67%;
+    height: 67%;
+    box-shadow: none;
+    border-radius: 15px;
+    transform: translate(25%,25%);
+    }
+}
+@keyframes ohh {
+   to{
+   transform: translate(-50%,24%);
+   }
+}
