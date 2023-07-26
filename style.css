@@ -39,12 +39,12 @@
     border-radius: 12px;
     transform: translate(40%,-60%);
     cursor: pointer;
-    background: rgb(176, 200, 243);
+    background: rgb(110, 114, 122);
 }
 .gamebox{
     background: #ffffff;
     position: absolute;
-    transform: translate(19%,24%);
+    transform: translate(21%,24%);
     height: 52%;
     width:64% ;
    
@@ -123,8 +123,9 @@
 }
 @keyframes okk {
     to{
-     width: 67%;
-    height: 67%;
+    padding-top: 30px;
+     width: 67.2%;
+    height: 63.5%;
     box-shadow: none;
     border-radius: 15px;
     transform: translate(25%,25%);
@@ -132,6 +133,6 @@
 }
 @keyframes ohh {
    to{
-   transform: translate(-50%,24%);
+   transform: translate(-50%,21%);
    }
 }
