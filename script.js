@@ -71,7 +71,7 @@ box.addEventListener('click',async ()=>{
     P.innerHTML='<br>';
     await levels();
     }
-}) 
+},{once : true}) 
 tryagain.addEventListener('click',async ()=>{
         userPattern=[];
         pattern=[];
@@ -83,13 +83,12 @@ tryagain.addEventListener('click',async ()=>{
         box.classList.remove('error');
         box.classList.add('okk');
         gamebox.classList.add('ohh');
+        P.innerHTML='<br>';
         box.style.transform='translate(40%,200%)';    
         await levels();
-})
+} )
 async function getBlockIndex(eve){
-    eve.stopPropagation();
     if(k==x){
-     console.log("okk");
      var index=arr.indexOf(eve.target);
      userPattern.push(index+1);
      var t=100;
