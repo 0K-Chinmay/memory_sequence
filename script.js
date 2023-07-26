@@ -28,15 +28,25 @@ const createPattern=async ()=>{
 const levels=async ()=>{
       document.getElementById('level').innerHTML=`Level: ${x}`;
       userPattern=[];
-      for(let i=0;i<x;i++){
       let number=parseInt(Math.random()*10);
       if(number==0)
       number=1;
       pattern.push(number);
-      }
       await createPattern();
       count=0;
       const myInterval=setInterval(async () => {
+        if(userPattern.length>pattern.length){
+            document.getElementById('level').innerHTML='';
+            gamebox.style.display='none';
+            errorbox.style.display='inline';
+            box.classList.remove('okk');
+            box.style.transform='translate(40%,200%)';
+            box.classList.add('error');
+            tryagain.style.scale='1';
+            tryagain.style.opacity='1';
+            box.style.padding='0';
+            return;
+        }
         if(userPattern.length==(count+1)){
             if(count<x){
                 if(pattern[count]==userPattern[count]){
@@ -61,10 +71,13 @@ const levels=async ()=>{
             await delay(1000)
             levels();
         }
+        console.log('pattern'+pattern);
+        console.log('userpattern'+userPattern);
     }, 1000);
     }
 box.addEventListener('click',async ()=>{
     if(x==1){
+    box.style.backgroundImage='none';
     errorbox.style.display='none';
     box.style.transform='translate(35%,200%)';    
     box.classList.add('fadeIn');
@@ -88,7 +101,7 @@ tryagain.addEventListener('click',async ()=>{
         await levels();
 } )
 async function getBlockIndex(eve){
-    if(k==x){
+    if(k==x && userPattern.length!=pattern.length){
      var index=arr.indexOf(eve.target);
      userPattern.push(index+1);
      var t=100;
