@@ -86,12 +86,12 @@ tryagain.addEventListener('click',async ()=>{
         box.style.transform='translate(40%,200%)';    
         await levels();
 })
-async function getBlockIndex(x){
+async function getBlockIndex(eve){
+    eve.stopPropagation();
     if(k==x){
      console.log("okk");
-     var index=arr.indexOf(x.target);
+     var index=arr.indexOf(eve.target);
      userPattern.push(index+1);
-     x.stopPropagation();
      var t=100;
      square[index].style.animation='1000ms Glow forwards';
      square[index].style.animationDuration='10s';
