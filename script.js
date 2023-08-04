@@ -27,9 +27,8 @@ const createPattern=async ()=>{
     }
 }
 const levels=async ()=>{
-    await delay(1000);
-    console.log("entered levels");
       document.getElementById('level').innerHTML=`Level: ${x}`;
+      await delay(1000);
       userPattern=[];
       let number=parseInt(Math.random()*10);
       if(number==0){
